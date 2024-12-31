@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <title>Khóa Luận Tốt Nghiệp - Trần Cao Minh</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="https://ntt.edu.vn/wp-content/uploads/2021/07/Logo20QS-04-1.png" alt="Logo" class="img-fluid" width="200" height="auto">
+            <a class="navbar-brand" href="#">UGGNet: Kết Nối U-Net Và VGG Để Chẩn Đoán Ung Thư Vú Nâng Cao</a>
+        </nav>
+
+        <div class="container mt-5">
+            <form method="post" enctype="multipart/form-data" class="mt-4 needs-validation text-center" novalidate>
+                <div class="form-group">
+                    <!-- <label for="fileInput">Load ảnh siêu âm (định dạng png, jpg, jpeg)</label> -->
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="fileInput" name="file" accept=".png, .jpg, .jpeg" required>
+                        <label class="custom-file-label" for="fileInput" id="fileInputLabel">Load ảnh siêu âm (định dạng png, jpg, jpeg)</label>
+                        <div class="invalid-feedback">Vui lòng chọn một file hợp lệ.</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mx-auto">Dự đoán</button>
+                <a href="https://publications.eai.eu/index.php/casa/article/view/4681">
+                    <button type="button" class="btn btn-success mx-auto">Paper</button>
+                </a>
+            </form>
+
+        </div>
+
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Kiến Trúc Chi Tiết UGGNet</h1>
+                <img src="/static/Picture1.png" alt="Mô tả ảnh"style="max-width: 100%; height: auto;">
+            </div>
+            
+        <!-- <iframe src="/static/2401.03173.pdf" width="800" height="600"></iframe> -->
+
+        </div>
+
+
+        
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Thông tin</h4>
+                    <p>Đây là sản phẩm khóa luận tốt nghiệp</p>
+                    <p>Sinh viên: Trần Cao Minh</p>
+                    <p>MSSV: 2000004265</p>
+                    <p>Khóa: 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Liên hệ</h4>
+                    <p>Email: trancaominhkg@gmail.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Kết nối</h4>
+                    <a href="#" class="btn btn-primary">Facebook</a>
+                    <a href="#" class="btn btn-info">Twitter</a>
+                    <a href="#" class="btn btn-danger">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS scripts (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Lắng nghe sự kiện khi người dùng chọn file
+            $('#fileInput').on('change', function () {
+                // Lấy tên file đã chọn
+                var fileName = $(this).val().split('\\').pop();
+                // Cập nhật nội dung của label
+                $('#fileInputLabel').text(fileName);
+            });
+        });
+    </script>
+
+
+</body>
+</html>

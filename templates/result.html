@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <title>Khóa Luận Tốt Nghiệp - Trần Cao Minh</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="https://ntt.edu.vn/wp-content/uploads/2021/07/Logo20QS-04-1.png" alt="Logo" class="img-fluid" width="200" height="auto">
+            <a class="navbar-brand" href="/">UGGNet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="jumbotron bg-primary text-white" style="padding: 1rem;">
+            <h1 class="display-5">Dự đoán với bộ trọng số UGGNet 19</h1>
+        </div>
+        <div class="mt-4">
+            <a href="/" class="btn btn-secondary">Quay lại trang gốc</a>
+        </div>
+    <div class="col-md-12">
+        <h2 class="card-title" style="text-align: center;">Ảnh Kết quả phân đoạn <span style="color: red">{{label}} </span> </h2>
+        <img class="card-img-top img-fluid" src="{{ img_path }}" alt="Resized Image">
+    </div>
+</div>
+
+        
+    </div>
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Thông tin</h4>
+                    <p>Đây là sản phẩm khóa luận tốt nghiệp</p>
+                    <p>Sinh viên: Trần Cao Minh</p>
+                    <p>MSSV: 2000004265</p>
+                    <p>Khóa: 2020</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Liên hệ</h4>
+                    <p>Email: trancaominhkg@gmail.com</p>
+                    <p>Di động: 09271.100.569</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Kết nối</h4>
+                    <a href="#" class="btn btn-primary">Facebook</a>
+                    <a href="#" class="btn btn-info">Twitter</a>
+                    <a href="#" class="btn btn-danger">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Add Bootstrap JS scripts (optional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
